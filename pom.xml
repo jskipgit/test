@@ -26,11 +26,13 @@
         </dependency>
 
         <!-- database -->
+        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
         <dependency>
-            <groupId>postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>RELEASE</version>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.193</version>
         </dependency>
+
         <!-- auto config for spring stuff -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
