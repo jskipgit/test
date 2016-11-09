@@ -3,7 +3,6 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>test</groupId>
     <artifactId>spring</artifactId>
-    <packaging>war</packaging>
 
     <!-- we are extending from this project POM which means we get
      everything that this pom has (inheritance) -->
@@ -107,7 +106,9 @@
 
 
     <build>
+        <finalName>app</finalName>
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

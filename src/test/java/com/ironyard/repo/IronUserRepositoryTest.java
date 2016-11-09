@@ -76,11 +76,11 @@ public class IronUserRepositoryTest {
     public void testFindByUsernameAndPass() throws Exception{
 
         // create user
-        IronUser tstUser = new IronUser("skipper", "pass", "Jason Skipper");
+        IronUser tstUser = new IronUser("skipper123", "passABC", "Jason Skipper");
         userRepo.save(tstUser);
 
        // find by user pass
-        IronUser found = userRepo.findByUsernameAndPassword("skipper", "pass");
+        IronUser found = userRepo.findByUsernameAndPassword("skipper123", "passABC");
         Assert.assertNotNull(found);
     }
 

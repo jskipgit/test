@@ -44,17 +44,5 @@ public class MovieRepositoryTest {
 
     }
 
-    @Test
-    public void addMetricShitTonOfMovies(){
-        RestTemplate restTemplate = new RestTemplate();
-        BollyWoodMovie[] movies = restTemplate.getForObject("http://api.cinemalytics.in/v2/movie/year/2001/?auth_token=82206B34357976B22466DEE624D9C177",  BollyWoodMovie[].class);
-        for(int i=0; i<movies.length; i++){
-            String desc = movies[i].getDescription();
-            if(desc.length()>255){
-                desc = desc.substring(0,255);
-            }
-            movieRepo.save(new Movie(  movies[i].getTitle(), "PG", movies[i].getUrl(),  desc, movies[i].getMinutes()));
-        }
-    }
 
 }
