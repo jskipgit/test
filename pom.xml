@@ -106,6 +106,7 @@
 
 
     <build>
+        <!-- will create a jar file named app.jar -->
         <finalName>app</finalName>
         <plugins>
 
